@@ -2,6 +2,7 @@ import React from 'react';
 import { useDarkMode } from '../hooks/useDarkMode';
 
 const Navbar = () => {
+  // Set key name and initial value on useDarkMode custom hook
   const [darkMode, toggleMode] = useDarkMode('DarkMode', false);
   return (
     <nav className='navbar'>
