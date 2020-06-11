@@ -181,7 +181,7 @@ img {
 }
 
 .dark-mode__toggle {
-  background: papayawhip;
+  background: #ffffff;
   border-radius: 50px;
   border: 1px solid black;
   height: 20px;
@@ -190,16 +190,17 @@ img {
 }
 
 .toggle {
-  background: #f68819;
+  background: blue;
   border-radius: 50px;
   height: 18px;
   left: 0;
   position: absolute;
-  transition: 0.2s;
+  transition: all 0.4s;
   width: 20px;
 }
 
 .toggled {
+  background: #ffffff;
   left: 18px;
 }
 
@@ -226,28 +227,60 @@ img {
   margin-bottom: 16px;
 }
 
+.coin_info_container {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1.5rem;
+}
+
 .coin__title {
-  display: block;
-  margin-left: 8px;
-    min-width: 160px;
-text-align: left;
+  font-weight: bold;
+  padding: 0px 1rem;
 }
 
 .coin__symbol {
-  display: block;
-  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 
 .coin__logo {
   width: 50px;
 }
 
+#line {
+  stroke: blue;
+}
+
 .dark-mode {
   color: #fff;
   background-color: #313843;
 
+  .dark-mode__toggle {
+    background: #66e466;
+  }
+
   .navbar {
-    background-color: #1F2022;
+    background-color: #1f2022;
     border: none;
+  }
+
+  #line {
+    stroke: #ff91c8;
+  }
+
+  g.recharts-cartesian-grid g line {
+    stroke: #3682ff !important;
+  }
+
+  g.recharts-layer.recharts-cartesian-axis-tick line {
+    stroke: yellow;
+  }
+
+  line.recharts-cartesian-axis-line {
+    stroke: #ecec26;
+  }
+
+  g.recharts-layer.recharts-cartesian-axis-tick text {
+    fill: yellow;
   }
 }
